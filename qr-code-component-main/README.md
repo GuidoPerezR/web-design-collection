@@ -22,8 +22,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://guidoperezr.github.io/web-design-collection/qr-code-component-main/)
 
 ## My process
 
@@ -98,7 +97,7 @@ In my next projects I will keep consider important make semantic HTML creating w
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me to import fonts and learned more about them.
+- [Example resource 1](https://fonts.google.com/) - This helped me to import fonts and learned more about them.
 
 ## Author
 
