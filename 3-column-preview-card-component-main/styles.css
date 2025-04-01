@@ -1,0 +1,143 @@
+/* root para que los colores se puedan usar globalmente */
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--very-light-gray);
+  height: 100vh;
+  width: auto;
+  display: grid;
+  place-content: center;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 10px;
+  max-width: 880px;
+  height: auto;
+  margin: 24px;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  padding: 42px;
+  box-sizing: border-box;
+
+  & h1 {
+    font-family: Big Shoulders;
+    color: var(--very-light-gray);
+    font-size: 32px;
+    text-transform: uppercase;
+    margin: 26px 0px;
+    transform: scale(1, 1.2);
+  }
+
+  & p {
+    font-family: Lexend Deca;
+    color: var(--transparent-white);
+    font-size: 15px;
+    line-height: 150%;
+    font-weight: 400;
+  }
+
+  & a {
+    position: absolute;
+    bottom: 10%;
+    padding: 13px 32px;
+    background: var(--very-light-gray);
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: Lexend Deca;
+    font-size: 14px;
+  }
+
+  &:first-child {
+    background: var(--bright-orange);
+
+    & a {
+      color: var(--bright-orange);
+    }
+  }
+
+  &:nth-child(2) {
+    background: var(--dark-cyan);
+
+    & a {
+      color: var(--dark-cyan);
+    }
+  }
+
+  &:last-child {
+    background: var(--very-dark-cyan);
+
+    & a {
+      color: var(--very-dark-cyan);
+    }
+  }
+}
+
+.card a:hover {
+  background: transparent;
+  color: var(--very-light-gray);
+  outline: var(--very-light-gray) solid 2px;
+}
+
+.footer {
+  padding: 24px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--bright-orange);
+}
+
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    margin: 42px 0px;
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: 1fr auto;
+  }
+
+  .container {
+    max-width: 320px;
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    height: 400px;
+  }
+
+  .footer {
+    position: relative;
+  }
+}
